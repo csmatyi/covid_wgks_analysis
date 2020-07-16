@@ -6,6 +6,8 @@ This repository contains several scripts, WGKS databases and test data to genera
 I. Generation of WGKS
 In order to generate a WGKS from a covid WGS, you can use either one of two Python k-mer analysis scripts. One, kmer_analysis.py anakyzes all k-mers, whereas kmer_analysis_mm.py analyzes all k-mers with up to [k/2] mutations. These scripts were written in Python3.
 
+For an overview of the WGKS pipeline, read the paper by Cserhati et al., 2019 at https://pubmed.ncbi.nlm.nih.gov/31827584/
+
 You can run the scripts in this manner:
 
 A. k-mers without mismatches:
