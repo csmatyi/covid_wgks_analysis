@@ -2,7 +2,7 @@ options(warn=-1)
 
 args = commandArgs(trailingOnly=TRUE)
 if (length(args)!=2) {
-        stop("Wrong parameters. Run as: Rscript generateDB.R <WGKS database> <input file>", call.=FALSE)
+        stop("Wrong parameters. Run as: Rscript matchQuery.R <WGKS database> <query file>", call.=FALSE)
 }
 
 wgksdb = args[1]
