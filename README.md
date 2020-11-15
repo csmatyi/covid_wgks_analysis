@@ -1,7 +1,7 @@
 # sc2_wgks_analysis
 Repository for R scripts used for analysis of covid19 WGS
 
-This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. These are located in the scripts, databases, and test_files folders. Supplementary Excel files and figures for the publication are located in the Supplementary_files folder.
+This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. These are located in the scripts, databases, and test_files folders. Supplementary Excel files and figures for the publication are located in the supplementary_material folder.
 
 In the following, several steps are described in the following:
 
