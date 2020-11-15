@@ -4,21 +4,19 @@ Repository for R scripts used for analysis of covid19 WGS
 This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. In the following, several steps are described in the following:
 
 I. Generation of WGKS
-In order to generate a WGKS from a covid WGS, you can use either one of two Python k-mer analysis scripts. One, kmer_analysis.py anakyzes all k-mers, whereas kmer_analysis_mm.py analyzes all k-mers with up to [k/2] mutations. These scripts were written in Python3.
+In order to generate a WGKS from a covid WGS, you can use either one of two Python k-mer analysis scripts. One, kmer_analysis_km.py analyzes all k-mers, with up to [k/2] mutations. These scripts were written in Python3.
 
 For an overview of the WGKS pipeline, read the paper by Cserhati et al., 2019 at https://pubmed.ncbi.nlm.nih.gov/31827584/
 
-You can run the scripts in this manner:
+You can run the scripts in this manner (scripts are in the scripts directory):
 
 A. k-mers without mismatches:
 python3 kmer_analysis_km.py -i <input WGS> -o <output file name> -k <length of k-mer> -m 0 -s <species name>
   
-  Note: -k is an integer value, the species name must be a single string, i.e. "Homo_sapiens", and the input file must be in fasta format
-  Example output:
-  
+  Note: -k is an integer value, the species name must be a single string, i.e. "Homo_sapiens", and the input file must be in fasta format. -m is set to 0.
   Sample output:
   
-  head -6 ../../k6/MT012098.1.fasta.k6
+  head -6 MT012098.1.fasta.k6
 #Species        No. chr.        Genome length   A%      C%      G%      T%
 #SARS-CoV-2_human_IND_29_2020   1       29854   0.2986199504254036      0.18389495544985596     0.19628860454210492     0.32119648958263547
 #Motif  Observed        Expected        Score
