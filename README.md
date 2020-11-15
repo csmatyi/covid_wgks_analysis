@@ -1,14 +1,16 @@
 # sc2_wgks_analysis
 Repository for R scripts used for analysis of covid19 WGS
 
-This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. In the following, several steps are described in the following:
+This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. These are located in the scripts, databases, and test_files folders. Supplementary Excel files and figures for the publication are located in the Supplementary_files folder.
+
+In the following, several steps are described in the following:
 
 I. Generation of WGKS
 In order to generate a WGKS from a covid WGS, you can use either one of two Python k-mer analysis scripts. One, kmer_analysis_km.py analyzes all k-mers, with up to [k/2] mutations. These scripts were written in Python3.
 
 For an overview of the WGKS pipeline, read the paper by Cserhati et al., 2019 at https://pubmed.ncbi.nlm.nih.gov/31827584/
 
-You can run the scripts in this manner (scripts are in the scripts directory):
+You can run the scripts in this manner:
 
 A. k-mers without mismatches:
 python3 kmer_analysis_km.py -i <input WGS> -o <output file name> -k <length of k-mer> -m 0 -s <species name>
