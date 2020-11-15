@@ -1,4 +1,4 @@
-# covid_wgks_analysis
+# sc2_wgks_analysis
 Repository for R scripts used for analysis of covid19 WGS
 
 This repository contains several scripts, WGKS databases and test data to generate WGKS databases and also match WGKS to databases. In the following, several steps are described in the following:
@@ -11,9 +11,9 @@ For an overview of the WGKS pipeline, read the paper by Cserhati et al., 2019 at
 You can run the scripts in this manner:
 
 A. k-mers without mismatches:
-python3 kmer_analysis.py -i <input WGS> -o <output file name> -n <length of k-mer> -s <species name>
+python3 kmer_analysis_km.py -i <input WGS> -o <output file name> -k <length of k-mer> -m 0 -s <species name>
   
-  Note: -n is an integer value, the species name must be a single string, i.e. "Homo_sapiens", and the input file must be in fasta format
+  Note: -k is an integer value, the species name must be a single string, i.e. "Homo_sapiens", and the input file must be in fasta format
   Example output:
   
   Sample output:
@@ -32,9 +32,9 @@ Where the first 3 rows are annotation:
 * line 3: column names for the rest of the file: motif (k-mer), observed occurrence, expected occurrence based on background ACGT%, and lastly, the score value.
 
 B. k-mers with mismathes:
-python3 kmer_analysis.py -i <input WGS> -o <output file name> -n <length of k-mer> -s <species name> -m <no. mismatches>
+python3 kmer_analysis_km.py -i <input WGS> -o <output file name> -k <length of k-mer> -s <species name> -m <no. mismatches>
 
-i.e. python3 kmer_analysis.py -i KY938558.1.fasta -o KY938558.1.fasta.k6m -n 6 -s Bat_coronavirus_strain_16BO133
+i.e. python3 kmer_analysis.py -i KY938558.1.fasta -o KY938558.1.fasta.k6m -k 6 -s Bat_coronavirus_strain_16BO133
 
 Here -m is an integer value designating the number of mismctahes allowed in the k-mer, at most [k/2],so if k=5, at most 2 mismatches can be set.
 The rest of the parameters are the same as in the first version, and the output is also the same, except that certain k-mers also appear with mismatches, i.e. AACNAT
